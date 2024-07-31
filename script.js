@@ -20,7 +20,7 @@ let turn = false;
 butn.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (turn) {
-        btn.style.color = "red";
+      btn.style.color = "red";
       btn.innerText = "X";
       turn = false;
     } else {
@@ -31,7 +31,6 @@ butn.forEach((btn) => {
     btn.disabled = true;
 
     winner();
-    
   });
 });
 
@@ -43,29 +42,23 @@ function winner() {
     count += 1;
     console.log(count);
     if (check1 != "" && check2 != "" && check3 != "") {
-       
       if (check1 === check2 && check2 === check3 && check1 === check3) {
         board.remove();
         const h = document.createElement("h1");
-        
-        h.innerText=`🎉Player '${check1}' Wins!🎉`;
-       
-        count--
+
+        h.innerText = `🎉Player '${check1}' Wins!🎉`;
+
+        count--;
         document.body.querySelector(".shub").appendChild(h);
         butn.forEach((btn) => {
           btn.disabled = true;
         });
-      } 
-      else if(count==72){
-        draw()
+      } else if (count == 72) {
+        draw();
       }
-      
-      }
-      
-      
     }
   }
-
+}
 
 newbtn.addEventListener("click", () => {
   location.reload();
@@ -75,10 +68,9 @@ resetbtn.addEventListener("click", () => {
 });
 
 function draw() {
-    board.remove();
+  board.remove();
   const k = document.createElement("h2");
   k.style.color = "red";
   k.innerText = `🔄 It's a Draw! Choose an option below:`;
   document.body.querySelector(".shub").appendChild(k);
-  
 }
