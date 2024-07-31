@@ -47,12 +47,13 @@ function winner() {
         const h = document.createElement("h1");
 
         h.innerText = `🎉Player '${check1}' Wins!🎉`;
-
         count--;
         document.body.querySelector(".shub").appendChild(h);
         butn.forEach((btn) => {
           btn.disabled = true;
         });
+
+        break;
       } else if (count == 72) {
         draw();
       }
