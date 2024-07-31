@@ -45,7 +45,7 @@ function winner() {
       if (check1 === check2 && check2 === check3 && check1 === check3) {
         setTimeout(() => {
             board.remove();
-        }, 1000);
+        }, 2000);
         const h = document.createElement("h1");
         h.innerText = `🎉Player '${check1}' Wins!🎉`;
         setTimeout(() => {
