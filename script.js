@@ -43,10 +43,16 @@ function winner() {
     console.log(count);
     if (check1 != "" && check2 != "" && check3 != "") {
       if (check1 === check2 && check2 === check3 && check1 === check3) {
-        board.remove();
+        setTimeout(() => {
+            board.remove();
+        }, 1000);
         const h = document.createElement("h1");
-
         h.innerText = `🎉Player '${check1}' Wins!🎉`;
+        setTimeout(() => {
+          h.style.opacity = "1";
+        }, 100);
+
+        
         count--;
         document.body.querySelector(".shub").appendChild(h);
         butn.forEach((btn) => {
