@@ -1,0 +1,137 @@
+.noto-color-emoji-regular {
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  :root {
+    --color-mix: linear-gradient(45deg,#041728, rgba(0, 0, 0, 0.9));
+    --color-mix-2: linear-gradient(45deg, #fff599f9, rgb(0, 109, 109));
+    --color-mix-3: linear-gradient(45deg, green, black);
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+#title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(0, 0, 0);
+    font-style: oblique;
+    font-weight: 900;
+    font-size: 65px;
+    color: #69e1ff;
+    text-shadow: 2px 2px 4px #000000;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+h1,h2{
+    color:var(--color-mix-2); /* good contrasting yellow */
+    text-shadow: 12px 12px 14px #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 700;   
+    font-size: 40px;
+    margin-bottom: 2rem;
+    font-size: 67px;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+body{
+    background-image: var(--color-mix); 
+    color: var(--color-mix); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    color: #FFF599;
+    text-shadow: 12px 12px 14px #000000;
+}
+
+#container{
+    margin-top: 6vh;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+  align-items: center;  
+}
+
+#board{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vmin;
+    height: 60vmin;
+    border-style: solid;
+    border-color: black;
+    background-color: #000000
+}
+
+.btn{
+    height: 20vmin;
+    width: 20vmin;
+    font-size: 12vmin;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 400;
+    border-style: solid;
+    border-color: black;
+    background-color: #6EACDA;
+    transition: all 0.3s ease-in-out;
+     background-color:#E2E2B6 ;  
+}
+
+.btnr{
+    margin-top: 20px;
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-around;
+    
+    width: 60vmin;
+}
+
+#newbtn{
+    background-color: #6EACDA;
+    color: #021526;
+    font-size: 3vmin;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-style: solid;
+}
+
+#newbtn:hover{
+    background-color: #021526;
+    color: #6EACDA;
+}
+#resetbtn{
+    background-color: #6EACDA;
+    color: #021526;
+    border-style: solid;
+    font-size: 3vmin;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+  
+}
+
+#resetbtn:hover{
+    background-color: #021526;
+    color: #6EACDA;
+}
+
+x{
+    color: #f60606;
+}
+O{
+    color: #000000;
+}
+
+
+
