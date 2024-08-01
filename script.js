@@ -4,6 +4,7 @@ const newbtn = document.querySelector("#newbtn");
 const resetbtn = document.querySelector("#resetbtn");
 const h1 = document.querySelector("h1");
 const main = document.getElementById("container");
+const button = document.querySelector(".btnr");
 
 const winpattern = [
   [0, 1, 2],
@@ -43,14 +44,12 @@ function winner() {
     console.log(count);
     if (check1 != "" && check2 != "" && check3 != "") {
       if (check1 === check2 && check2 === check3 && check1 === check3) {
-        setTimeout(() => {
-            board.remove();
-        }, 2000);
+        
+            board.style.opacity = "0.2";
+        
         const h = document.createElement("h1");
         h.innerText = `🎉Player '${check1}' Wins!🎉`;
-        setTimeout(() => {
-          h.style.opacity = "1";
-        }, 100);
+        document.body.querySelector(".final").appendChild(button);
 
         
         count--;
