@@ -5,7 +5,8 @@ const resetbtn = document.querySelector("#resetbtn");
 const h1 = document.querySelector("h1");
 const main = document.getElementById("container");
 const button = document.querySelector(".btnr");
-
+var X = 0;
+var O = 0;
 const winpattern = [
   [0, 1, 2],
   [0, 3, 6],
@@ -41,16 +42,27 @@ function winner() {
     let check2 = butn[chance[1]].innerText;
     let check3 = butn[chance[2]].innerText;
     count += 1;
-    console.log(count);
     if (check1 != "" && check2 != "" && check3 != "") {
       if (check1 === check2 && check2 === check3 && check1 === check3) {
         
-            board.style.opacity = "0.2";
+            board.style.opacity = "0.1";
         
         const h = document.createElement("h1");
         h.innerText = `🎉Player '${check1}' Wins!🎉`;
         document.body.querySelector(".final").appendChild(button);
 
+        if (check1 == "X") {
+          X++;
+        } else if(check1 == "O") {
+          O++;
+        }
+        else{
+            h2.innerText ="DRAW"
+        }
+        
+        h2.innerText = `X: ${X} O: ${O}`;
+        h2.style.color = "red";
+        h2.style.fontSize = "8vmin";
         
         count--;
         document.body.querySelector(".shub").appendChild(h);
@@ -67,7 +79,9 @@ function winner() {
 }
 
 newbtn.addEventListener("click", () => {
-  location.reload();
+   X = localStorage.getItem("X");
+   O = localStorage.getItem("O");
+   location.reload();  
 });
 resetbtn.addEventListener("click", () => {
   location.reload();
